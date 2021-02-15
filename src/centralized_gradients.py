@@ -41,6 +41,7 @@ def get_centralized_gradients(optimizer, loss, params):
                  for g in grads]
     return grads
 
+
 def centralized_gradients_for_optimizer(optimizer):
     """Create a centralized gradients functions for an optimizer.
 
