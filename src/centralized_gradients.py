@@ -15,10 +15,11 @@ def get_centralized_gradients(optimizer, loss, params):
     # gradients at this stage which can be used in other optimizers.
     grads = []
     for grad in K.gradients(loss, params):
-        rank = len(grad.shape)
-        if rank > 1:
+        grad_len = len(grad.shape)
+        if grad_len > 1:
+            axis = list(range(grad_len - 1))
             grad -= tf.reduce_mean(grad,
-                                   axis=list(range(rank - 1)),
+                                   axis=axis,
                                    keep_dims=True)
         grads.append(grad)
 
