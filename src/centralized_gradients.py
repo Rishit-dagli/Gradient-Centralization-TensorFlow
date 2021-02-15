@@ -40,3 +40,20 @@ def get_centralized_gradients(optimizer, loss, params):
         grads = [K.clip(g, -optimizer.clipvalue, optimizer.clipvalue)
                  for g in grads]
     return grads
+
+def centralized_gradients_for_optimizer(optimizer):
+    """Create a centralized gradients functions for an optimizer.
+
+    # Arguments
+        optimizer: a tf.keras.optimizer object. The optimizer you are using.
+
+    # Raises
+        TypeError: in case a non optimizer object is passed.
+    """
+
+    def get_centralized_gradients_for_optimizer(loss, params):
+        return get_centralized_gradients(optimizer, loss, params)
+
+    if 'tensorflow.python.keras.optimizer_v2' in type(optimizer):
+        return get_centralized_gradients_for_optimizer
+    raise TypeError(str(type(optimizer)) + ' is not a tensorflow.python.keras.optimizer_v2 object')
