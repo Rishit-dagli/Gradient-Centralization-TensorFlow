@@ -47,9 +47,6 @@ def centralized_gradients_for_optimizer(optimizer):
 
     # Arguments
         optimizer: a tf.keras.optimizer object. The optimizer you are using.
-
-    # Raises
-        TypeError: in case a non optimizer object is passed.
     """
 
     def get_centralized_gradients_for_optimizer(loss, params):
