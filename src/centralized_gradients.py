@@ -17,7 +17,9 @@ def get_centralized_gradients(optimizer, loss, params):
     for grad in K.gradients(loss, params):
         rank = len(grad.shape)
         if rank > 1:
-            grad -= tf.reduce_mean(grad, axis=list(range(rank - 1)), keep_dims=True)
+            grad -= tf.reduce_mean(grad,
+                                   axis=list(range(rank - 1)),
+                                   keep_dims=True)
         grads.append(grad)
 
     if None in grads:
@@ -28,7 +30,12 @@ def get_centralized_gradients(optimizer, loss, params):
                          'K.argmax, K.round, K.eval.')
     if hasattr(optimizer, 'clipnorm') and optimizer.clipnorm > 0:
         norm = K.sqrt(sum([K.sum(K.square(g)) for g in grads]))
-        grads = [tf.keras.optimizers.clip_norm(g, optimizer.clipnorm, norm) for g in grads]
+        grads = [
+            tf.keras.optimizers.clip_norm(
+                g,
+                optimizer.clipnorm,
+                norm) for g in grads]
     if hasattr(optimizer, 'clipvalue') and optimizer.clipvalue > 0:
-        grads = [K.clip(g, -optimizer.clipvalue, optimizer.clipvalue) for g in grads]
+        grads = [K.clip(g, -optimizer.clipvalue, optimizer.clipvalue)
+                 for g in grads]
     return grads
