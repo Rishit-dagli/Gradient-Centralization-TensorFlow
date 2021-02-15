@@ -25,8 +25,8 @@ setup(
     # extras_require={
     #     "dev": [
     #         "pytest >= 3.7",
-    #         "check-manifest",
-    #         "twine",
+    #         # "check-manifest",
+    #         # "twine",
     #     ],
     # },
 )

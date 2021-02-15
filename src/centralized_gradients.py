@@ -55,7 +55,4 @@ def centralized_gradients_for_optimizer(optimizer):
     def get_centralized_gradients_for_optimizer(loss, params):
         return get_centralized_gradients(optimizer, loss, params)
 
-    if 'tensorflow.python.keras.optimizer_v2' in type(optimizer):
-        return get_centralized_gradients_for_optimizer
-    raise TypeError(str(type(optimizer)) +
-                    ' is not a tensorflow.python.keras.optimizer_v2 object')
+    return get_centralized_gradients_for_optimizer
