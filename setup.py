@@ -20,7 +20,10 @@ setup(
     url="https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow",
     author="Rishit Dagli",
     author_email="rishit.dagli@gmail.com",
-
+    install_requires=[
+        "tensorflow ~= 2.4.0",
+        "keras ~= 2.4.0",
+    ],
     # extras_require={
     #     "dev": [
     #         "pytest >= 3.7",
