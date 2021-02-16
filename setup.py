@@ -7,8 +7,7 @@ setup(
     name="gradient-centralization-tf",
     version="0.0.1",
     description=" ",
-    py_modules=["gradient-centralization-tf"],
-    package_dir={"": "src"},
+    py_modules=["gctf"],
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
