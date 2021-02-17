@@ -24,11 +24,10 @@ setup(
         "tensorflow ~= 2.4.0",
         "keras ~= 2.4.0",
     ],
-    # extras_require={
-    #     "dev": [
-    #         "pytest >= 3.7",
-    #         # "check-manifest",
-    #         # "twine",
-    #     ],
-    # },
+    extras_require={
+        "dev": [
+            # "check-manifest",
+            # "twine",
+        ],
+    },
 )
