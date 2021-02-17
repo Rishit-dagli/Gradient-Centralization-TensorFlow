@@ -26,8 +26,8 @@ setup(
     ],
     extras_require={
         "dev": [
-            # "check-manifest",
-            # "twine",
+            "check-manifest",
+            "twine",
         ],
     },
 )
