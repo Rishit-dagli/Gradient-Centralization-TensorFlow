@@ -1,11 +1,13 @@
 from setuptools import setup
 
+exec(open('gctf/version.py').read())
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="gradient-centralization-tf",
-    version="0.0.1",
+    version=__version__,
     description="Implement Gradient Centralization in TensorFlow",
     py_modules=["gctf"],
     long_description=long_description,
