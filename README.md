@@ -18,3 +18,23 @@ Deep Neural Networks as suggested by Yong et al. in the paper
  process and improve the final generalization performance of DNNs.
  
 ![](images/gctf.png)
+
+## Installation
+
+Run the following to install:
+
+```bash
+pip install gradient-centralization-tf
+```
+
+## Developing `gctf`
+
+To install `gradient-centralization-tf`, along with tools you need to develop and test, run the following in your 
+virtualenv:
+
+```bash
+git clone git@github.com:Rishit-dagli/Gradient-Centralization-TensorFlow
+# or clone your own fork
+
+pip install -e .[dev]
+```
