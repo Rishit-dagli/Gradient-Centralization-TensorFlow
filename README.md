@@ -3,7 +3,7 @@
 TODO: Add Pypi badge
 
 [![Upload Python Package](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/python-publish.yml)
-[![Format python code](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/code-style.yml/badge.svg)](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/code-style.yml)
+[![Flake8 Lint](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/flake8-lint.yml)
 ![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue)
 
 [![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
