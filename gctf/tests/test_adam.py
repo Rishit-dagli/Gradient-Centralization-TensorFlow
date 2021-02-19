@@ -49,12 +49,18 @@ def testSparse(self):
             var1 = variables.Variable(var1_np)
             grads0_np_indices = np.array([0, 2], dtype=np.int32)
             grads0 = ops.IndexedSlices(
-                constant_op.constant(grads0_np[grads0_np_indices]),
-                constant_op.constant(grads0_np_indices), constant_op.constant([3]))
+                constant_op.constant(
+                    grads0_np[grads0_np_indices]),
+                constant_op.constant(grads0_np_indices),
+                constant_op.constant(
+                    [3]))
             grads1_np_indices = np.array([0, 2], dtype=np.int32)
             grads1 = ops.IndexedSlices(
-                constant_op.constant(grads1_np[grads1_np_indices]),
-                constant_op.constant(grads1_np_indices), constant_op.constant([3]))
+                constant_op.constant(
+                    grads1_np[grads1_np_indices]),
+                constant_op.constant(grads1_np_indices),
+                constant_op.constant(
+                    [3]))
             opt = adam()
             update = opt.apply_gradients(zip([grads0, grads1], [var0, var1]))
             self.evaluate(variables.global_variables_initializer())
@@ -72,9 +78,13 @@ def testSparse(self):
                                                    self.evaluate(beta_2_power))
                 update.run()
 
-                var0_np, m0, v0 = adam_update_numpy(var0_np, grads0_np, t, m0, v0)
-                var1_np, m1, v1 = adam_update_numpy(var1_np, grads1_np, t, m1, v1)
+                var0_np, m0, v0 = adam_update_numpy(
+                    var0_np, grads0_np, t, m0, v0)
+                var1_np, m1, v1 = adam_update_numpy(
+                    var1_np, grads1_np, t, m1, v1)
 
                 # Validate updated params
-                self.assertAllCloseAccordingToType(var0_np, self.evaluate(var0))
-                self.assertAllCloseAccordingToType(var1_np, self.evaluate(var1))
+                self.assertAllCloseAccordingToType(
+                    var0_np, self.evaluate(var0))
+                self.assertAllCloseAccordingToType(
+                    var1_np, self.evaluate(var1))
