@@ -30,6 +30,7 @@ setup(
         "dev": [
             "check-manifest",
             "twine",
+            "numpy"
         ],
     },
 )
