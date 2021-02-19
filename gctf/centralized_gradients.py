@@ -3,12 +3,22 @@ import keras.backend as K
 
 
 def get_centralized_gradients(optimizer, loss, params):
-    """
-    Compute the centralized gradients.
+    """Compute the centralized gradients.
 
-    Modified version of tf.keras.optimizers.Optimizer.get_gradients
-    Reference:
-        https://arxiv.org/abs/2004.01461
+    This function is ideally not meant to be used directly unless you are building a custom optimizer, in which case you
+    could point `get_gradients` to this function. This is a modified version of
+    `tf.keras.optimizers.Optimizer.get_gradients`.
+
+    # Arguments:
+        optimizer: a `tf.keras.optimizers.Optimizer object`. The optimizer you are using.
+        loss: Scalar tensor to minimize.
+        params: List of variables.
+
+    # Returns:
+      A gradients tensor.
+
+    # Reference:
+        [Yong et al., 2020](https://arxiv.org/abs/2004.01461)
     """
 
     # We here just provide a modified get_gradients() function since we are trying to just compute the centralized
@@ -43,10 +53,18 @@ def get_centralized_gradients(optimizer, loss, params):
 
 
 def centralized_gradients_for_optimizer(optimizer):
-    """Create a centralized gradients functions for an optimizer.
+    """Create a centralized gradients functions for a specified optimizer.
 
-    # Arguments
-        optimizer: a tf.keras.optimizer object. The optimizer you are using.
+    # Arguments:
+        optimizer: a `tf.keras.optimizers.Optimizer object`. The optimizer you are using.
+
+    # Usage:
+
+    ```py
+    >>> opt = tf.keras.optimizers.Adam(learning_rate=0.1)
+    >>> optimizer.get_gradients = gctf.centralized_gradients_for_optimizer(opt)
+    >>> model.compile(optimizer = opt, ...)
+    ```
     """
 
     def get_centralized_gradients_for_optimizer(loss, params):
