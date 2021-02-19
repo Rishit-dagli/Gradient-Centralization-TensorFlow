@@ -1,12 +1,11 @@
-from ..centralized_gradients import centralized_gradients_for_optimizer
-
 import numpy as np
 from tensorflow.python.framework import constant_op
 from tensorflow.python.framework import dtypes
 from tensorflow.python.framework import ops
-from tensorflow.keras.optimizers import Adam
 from tensorflow.python.ops import math_ops
 from tensorflow.python.ops import variables
+
+from ..optimizers import adam
 
 
 def get_beta_accumulators(opt, dtype):
@@ -56,8 +55,7 @@ def testSparse(self):
             grads1 = ops.IndexedSlices(
                 constant_op.constant(grads1_np[grads1_np_indices]),
                 constant_op.constant(grads1_np_indices), constant_op.constant([3]))
-            opt = Adam()
-            opt.get_gradients = centralized_gradients_for_optimizer(opt)
+            opt = adam()
             update = opt.apply_gradients(zip([grads0, grads1], [var0, var1]))
             self.evaluate(variables.global_variables_initializer())
 
