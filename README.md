@@ -34,7 +34,7 @@ pip install gradient-centralization-tf
 Create a centralized gradients functions for a specified optimizer.
 
 #### Arguments:
-- optimizer: a `tf.keras.optimizers.Optimizer object`. The optimizer you are using.
+- `optimizer`: a `tf.keras.optimizers.Optimizer object`. The optimizer you are using.
 
 #### Example:
 
@@ -53,15 +53,29 @@ could point `get_gradients` to this function. This is a modified version of
 `tf.keras.optimizers.Optimizer.get_gradients`.
 
 #### Arguments:
-- optimizer: a `tf.keras.optimizers.Optimizer object`. The optimizer you are using.
-- loss: Scalar tensor to minimize.
-- params: List of variables.
+- `optimizer`: a `tf.keras.optimizers.Optimizer` object. The optimizer you are using.
+- `loss`: Scalar tensor to minimize.
+- `params`: List of variables.
 
 #### Returns:
 A gradients tensor.
 
-#### Reference:
-- [Yong et al., 2020](https://arxiv.org/abs/2004.01461)
+### [`gctf.optimizers`](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/blob/main/gctf/optimizers.py)
+
+Pre built updated optimizers implementing GC.
+
+This module is speciially built for testing out GC and in most cases you would be using [`gctf.centralized_gradients_for_optimizer`](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow#gctfcentralized_gradients_for_optimizer) though this module implements `gctf.centralized_gradients_for_optimizer`. You can directly use all optimizers with [`tf.keras.optimizers`](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers) updated for GC.
+
+#### Example:
+
+```py
+>>> model.compile(optimizer = gctf.optimizers.adam(learning_rate = 0.01), ...)
+>>> model.compile(optimizer = gctf.optimizers.rmsprop(learning_rate = 0.01, rho = 0.91), ...)
+>>> model.compile(optimizer = gctf.optimizers.sgd(), ...)
+```
+
+#### Returns:
+A `tf.keras.optimizers.Optimizer` object.
 
 ## Developing `gctf`
 
