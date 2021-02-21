@@ -62,7 +62,7 @@ def centralized_gradients_for_optimizer(optimizer):
 
     ```py
     >>> opt = tf.keras.optimizers.Adam(learning_rate=0.1)
-    >>> optimizer.get_gradients = gctf.centralized_gradients_for_optimizer(opt)
+    >>> opt.get_gradients = gctf.centralized_gradients_for_optimizer(opt)
     >>> model.compile(optimizer = opt, ...)
     ```
     """
