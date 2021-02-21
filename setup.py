@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="gradient-centralization-tf",
-    version="0.0.1",
+    version="0.0.2",
     description="Implement Gradient Centralization in TensorFlow",
     packages=["gctf"],
 
