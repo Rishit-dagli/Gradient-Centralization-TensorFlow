@@ -1,6 +1,7 @@
 # Gradient Centralization TensorFlow [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FRishit-dagli%2FGradient-Centralization-TensorFlow)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FRishit-dagli%2FGradient-Centralization-TensorFlow)
 
 [![PyPI](https://img.shields.io/pypi/v/gradient-centralization-tf)](https://pypi.org/project/gradient-centralization-tf/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4570279.svg)](https://doi.org/10.5281/zenodo.4570279)
 [![Upload Python Package](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/python-publish.yml)
 [![Flake8 Lint](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/actions/workflows/flake8-lint.yml)
 ![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue)
