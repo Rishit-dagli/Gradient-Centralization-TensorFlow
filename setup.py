@@ -23,6 +23,10 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "License :: OSI Approved :: Apache Software License",
+        "Intended Audience :: Developers"
+        "Intended Audience :: Education"
+        "Intended Audience :: Science/Research"
+
     ],
 
     url="https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow",
