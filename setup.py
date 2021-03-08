@@ -15,6 +15,7 @@ setup(
     long_description_content_type="text/markdown",
 
     classifiers=[
+        "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.7",
