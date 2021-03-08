@@ -30,6 +30,27 @@ Run the following to install:
 pip install gradient-centralization-tf
 ```
 
+## About the Examples
+
+### [`gctf_mnist.ipynb`](examples/gctf_mnist.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rishit-dagli/Gradient-Centralization-TensorFlow/blob/main/examples/gctf_mnist.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Rishit-dagli/Gradient-Centralization-TensorFlow/c4c1b0f947b0ae6de0a2964b2fcb5c37faa6c72b?filepath=examples%2Fgctf_mnist.ipynb)
+
+This notebook shows the the process of using the [`gradient-centralization-tf`](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow) 
+Python package to train on the [Fashion MNIST](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/fashion_mnist) 
+dataset availaible from [`tf.keras.datasets`](https://www.tensorflow.org/api_docs/python/tf/keras/datasets). It further 
+also compares using `gctf` and performance without using `gctf`.
+
+### [`gctf_horses_v_humans.ipynb`](examples/gctf_horses_v_humans.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rishit-dagli/Gradient-Centralization-TensorFlow/blob/main/examples/gctf_horses_v_humans.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Rishit-dagli/Gradient-Centralization-TensorFlow/c4c1b0f947b0ae6de0a2964b2fcb5c37faa6c72b?filepath=examples%2Fgctf_horses_v_humans.ipynb)
+
+This notebook shows the the process of using the [`gradient-centralization-tf`](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow) 
+Python package to train on the [Horses vs Humans](http://www.laurencemoroney.com/horses-or-humans-dataset/) dataset by 
+[Laurence Moroney](https://twitter.com/lmoroney). It further also compares using `gctf` and performance without using 
+`gctf`.
+
 ## Usage
 
 ### [`gctf.centralized_gradients_for_optimizer`](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/blob/main/gctf/centralized_gradients.py#L45-L55)
