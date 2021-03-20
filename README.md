@@ -119,7 +119,7 @@ Awesome! If you want to contribute to this project, you're always welcome! See [
 
 ## Want to discuss? 💬
 
-Have any questions, doubts or want to present your opinions, views? You're always welcome. You can [start discussions](https://github.com/Rishit-dagli/MIRNet-TFJS/discussions).
+Have any questions, doubts or want to present your opinions, views? You're always welcome. You can [start discussions](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/discussions).
 
 ## License
 
