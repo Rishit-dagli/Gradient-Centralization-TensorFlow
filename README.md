@@ -67,6 +67,9 @@ Create a centralized gradients functions for a specified optimizer.
 >>> opt.get_gradients = gctf.centralized_gradients_for_optimizer(opt)
 >>> model.compile(optimizer = opt, ...)
 ```
+
+#### Returns:
+A `tf.keras.optimizers.Optimizer` object.
     
 ### [`gctf.get_centralized_gradients`](https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow/blob/a7c5226dad86ca42341061e3fafc8c8d1ec3f51f/gctf/centralized_gradients.py#L5-L42)
 
@@ -107,7 +110,7 @@ To install `gradient-centralization-tf`, along with tools you need to develop an
 virtualenv:
 
 ```bash
-git clone git@github.com:Rishit-dagli/Gradient-Centralization-TensorFlow
+git clone https://github.com/Rishit-dagli/Gradient-Centralization-TensorFlow
 # or clone your own fork
 
 pip install -e .[dev]
