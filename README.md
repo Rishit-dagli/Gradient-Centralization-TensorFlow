@@ -58,7 +58,7 @@ Python package to train on the [Horses vs Humans](http://www.laurencemoroney.com
 Create a centralized gradients functions for a specified optimizer.
 
 #### Arguments:
-- `optimizer`: a `tf.keras.optimizers.Optimizer object`. The optimizer you are using.
+- `optimizer`: a `tf.keras.optimizers.Optimizer` object. The optimizer you are using.
 
 #### Example:
 
